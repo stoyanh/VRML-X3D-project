@@ -1,0 +1,95 @@
+   <html> 
+        <head> 
+            <title>My first X3DOM page</title>          
+            <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
+            <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+        </head> 
+        <body> 
+            <h1>Hello, X3DOM!</h1> 
+            <p> 
+                This is my first html page with some 3d objects. 
+            </p>
+
+            <x3d width='600px' height='400px'> 
+                <scene> 
+                    <!-- Red triangle -->
+                    <shape> 
+                        <appearance> 
+                            <material diffuseColor='1 0 0'></material> 
+                        </appearance> 
+                        <TriangleSet solid='false' ccw='true' colorPerVertex='true' normalPerVertex='true'
+                                                 containerField='geometry'>
+                            <Coordinate point='-3.0 -2.0 0 3.0 -2.0 0 0 3.0 0'/>
+                        </TriangleSet> 
+                    </shape>
+
+                    <!-- White triangle -->
+                    <shape> 
+                        <appearance> 
+                            <material diffuseColor='1 1 1'></material> 
+                        </appearance> 
+                        <TriangleSet solid='false' ccw='true' colorPerVertex='true' normalPerVertex='true'
+                                                 containerField='geometry'>
+                            <Coordinate point='-2 -1.5 0.01 2 -1.5 0.01 0 2.0 0.01'/>
+                        </TriangleSet> 
+                    </shape>
+
+                    <!-- Arrow down box -->
+                    <transform translation='-0.5 -0.2 0.05'>
+                        <shape>
+                            <appearance>
+                                <material diffuseColor='0 0 0'></material>
+                            </appearance>
+                            <box size='0.3 1.5 0'></box>
+                        </shape>
+                    </transform>
+
+                    <!-- Arrow down --> 
+                    <transform translation='-0.5 -0.8 0.05'>
+                        <shape>
+                            <appearance>
+                                <material diffuseColor='0 0 0'></material>
+                            </appearance>
+                            <TriangleSet solid='false' ccw='true' colorPerVertex='true' normalPerVertex='true'
+                                                 containerField='geometry'>
+                            <Coordinate point='-0.4 0 0 0.4 0 0 0 -0.6 0'/>
+                            </TriangleSet>                         
+                        </shape>
+                    </transform>
+
+                    <!-- Arrow up box --> 
+                    <transform translation='0.5 -0.65 0.05'>
+                        <shape>
+                            <appearance>
+                                <material diffuseColor='0 0 0'></material>
+                            </appearance>
+                            <box size='0.3 1.5 0'></box>
+                        </shape>
+                    </transform>
+
+                     <!-- Arrow up --> 
+                    <transform translation='0.5 -0.1 0.05'>
+                        <shape>
+                            <appearance>
+                                <material diffuseColor='0 0 0'></material>
+                            </appearance>
+                            <TriangleSet solid='false' ccw='true' colorPerVertex='true' normalPerVertex='true'
+                                                 containerField='geometry'>
+                            <Coordinate point='-0.4 0 0 0.4 0 0 0 0.7 0'/>
+                            </TriangleSet>                         
+                        </shape>
+                    </transform>
+
+                     <!-- Cylinder --> 
+                    <transform translation='0 -2.5 -0.3'>
+                        <shape>
+                            <appearance>
+                                <material diffuseColor='0.9 0.9 0.9'/>
+                            </appearance>
+                            <cylinder solid='false' radius="0.2" height="4.0"/>
+                    </shape>
+                   </transform>
+                </scene>
+            </x3d> 
+        </body> 
+    </html> 
