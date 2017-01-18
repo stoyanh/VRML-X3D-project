@@ -1,6 +1,6 @@
    <html> 
         <head> 
-            <title>My first X3DOM page</title>          
+            <title>A30</title>          
             <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
             <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
         </head> 
@@ -78,7 +78,7 @@
                     <group>
                         <transform DEF="Left arrow">
                             <!-- Left arrow cylinder -->
-                           <transform translation='-0.5 -0.3 0.05'>
+                           <transform translation='-0.5 -0.15 0.05'>
                                 <shape>
                                     <appearance>
                                         <material diffuseColor='0 0 0'/>
@@ -87,7 +87,7 @@
                             </shape>
                            </transform>
                            <!-- Left arrow cone -->
-                           <transform translation='-0.5 -1.3 0.05' rotation='0 0 1 3.14'>
+                           <transform translation='-0.5 -1.15 0.05' rotation='0 0 1 3.14'>
                                 <shape>
                                     <appearance>
                                         <material diffuseColor='0 0 0'/>
@@ -97,7 +97,7 @@
                             </transform> 
                           </shape>
                       </transform>
-                      <timeSensor DEF="ClockLeft" cycleInterval="2" loop="true"></timeSensor>
+                      <timeSensor DEF="ClockLeft" cycleInterval="1" loop="true"></timeSensor>
                       <PositionInterpolator DEF="MoveLeft" key="0 0.5 1" keyValue="0 0 0  0 -0.5 0  0 0 0 "></PositionInterpolator>
 
                    </group>
@@ -122,7 +122,7 @@
                                 </shape>
                             </transform>
                         </transform>
-                        <timeSensor DEF="ClockRight" cycleInterval="2" loop="true"></timeSensor>
+                        <timeSensor DEF="ClockRight" cycleInterval="1" loop="true"></timeSensor>
                         <PositionInterpolator DEF="MoveRight" key="0 0.5 1" keyValue="0 0 0  0 0.5 0  0 0 0 "></PositionInterpolator>
                     </group>
 
@@ -135,7 +135,6 @@
                             <cylinder solid='false' radius="0.2" height="4.0"/>
                     </shape>
                    </transform>
-
 
                     <Route fromNode="ClockLeft" fromField ="fraction_changed" toNode="MoveLeft" toField="set_fraction"></Route>
                     <Route fromNode="MoveLeft" fromField ="value_changed" toNode="Left arrow" toField="translation"></Route>
